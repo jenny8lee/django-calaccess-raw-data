@@ -3548,13 +3548,15 @@ Part R: late payments received from')
         max_digits=16, decimal_places=2, db_column='AMT_ATTRIB'
     )
     memo_code = fields.CharField(
-        max_length=1, db_column='MEMO_CODE', blank=True
+        max_length=1, db_column='MEMO_CODE', blank=True,
+        help_text="Memo amount flag"
     )
     memo_refno = fields.CharField(
         max_length=20, db_column='MEMO_REFNO', blank=True
     )
     employer = fields.CharField(
-        max_length=200, db_column='EMPLOYER', blank=True
+        max_length=200, db_column='EMPLOYER', blank=True,
+        help_text="Employer"
     )
     occupation = fields.CharField(
         max_length=60, db_column='OCCUPATION', blank=True
